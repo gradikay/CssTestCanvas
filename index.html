@@ -3,473 +3,194 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="HTML template for CSS testing">
-    <meta name="author" content="CSS Tester">
-    <title>CSS Testing Playground</title>
-    <!-- This file is designed for CSS testing, link your stylesheet here -->
-    <!-- <link rel="stylesheet" href="your-styles.css"> -->
+    <title>Simple Landing Page</title>
+    <!-- Link your CSS file here -->
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <!-- Header Section -->
-    <header id="main-header" class="section container">
-        <h1 class="title primary-title">CSS Testing Document</h1>
-        <p class="subtitle">A comprehensive HTML document with various elements for CSS testing</p>
-        <nav id="main-nav">
-            <ul class="nav-list horizontal">
-                <li class="nav-item"><a href="#typography" class="nav-link">Typography</a></li>
-                <li class="nav-item"><a href="#containers" class="nav-link active">Containers</a></li>
-                <li class="nav-item"><a href="#forms" class="nav-link">Forms</a></li>
-                <li class="nav-item"><a href="#tables" class="nav-link">Tables</a></li>
-                <li class="nav-item"><a href="#misc" class="nav-link">Miscellaneous</a></li>
-            </ul>
-        </nav>
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <h1>Brand<span>Name</span></h1>
+            </div>
+            <nav class="nav">
+                <ul>
+                    <li><a href="#home" class="active">Home</a></li>
+                    <li><a href="#features">Features</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#testimonials">Testimonials</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
 
-    <main id="content">
-        <!-- Typography Section -->
-        <section id="typography" class="section">
-            <h2 class="section-title">Typography Elements</h2>
-            
-            <!-- Headings -->
-            <div class="element-group">
-                <h3 class="element-title">Headings</h3>
-                <h1 class="heading">Heading Level 1</h1>
-                <h2 class="heading">Heading Level 2</h2>
-                <h3 class="heading">Heading Level 3</h3>
-                <h4 class="heading">Heading Level 4</h4>
-                <h5 class="heading">Heading Level 5</h5>
-                <h6 class="heading">Heading Level 6</h6>
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h2 class="hero-title">Welcome to Our Landing Page</h2>
+                <p class="hero-text">This is a simple landing page template for testing your CSS skills. It includes various elements that you can style to create a beautiful design.</p>
+                <div class="cta-buttons">
+                    <a href="#" class="btn primary-btn">Get Started</a>
+                    <a href="#" class="btn secondary-btn">Learn More</a>
+                </div>
             </div>
-
-            <!-- Paragraphs -->
-            <div class="element-group">
-                <h3 class="element-title">Paragraphs</h3>
-                <p class="text">This is a standard paragraph with <em>emphasized</em> text and <strong>strong</strong> text.</p>
-                <p class="text highlight">This is a paragraph with a 'highlight' class that you can style differently.</p>
-                <p class="text small-text">This paragraph has a 'small-text' class for styling smaller text.</p>
+            <div class="hero-image">
+                <div class="image-placeholder">Hero Image Placeholder</div>
             </div>
+        </div>
+    </section>
 
-            <!-- Text Formatting -->
-            <div class="element-group">
-                <h3 class="element-title">Text Formatting</h3>
-                <p>
-                    <b>Bold Text</b> | 
-                    <i>Italic Text</i> | 
-                    <u>Underlined Text</u> | 
-                    <s>Strikethrough Text</s> | 
-                    <mark>Marked/Highlighted Text</mark> | 
-                    <code>Code Text</code> | 
-                    <small>Small Text</small> | 
-                    Text with <sub>Subscript</sub> and <sup>Superscript</sup>
-                </p>
-                <blockquote class="quote">
-                    This is a blockquote element. It can be styled to stand out from regular text.
-                    <cite>- Source Citation</cite>
-                </blockquote>
+    <!-- Features Section -->
+    <section id="features" class="features">
+        <div class="container">
+            <h2 class="section-title">Key Features</h2>
+            <div class="feature-cards">
+                <div class="card">
+                    <div class="card-icon">🚀</div>
+                    <h3 class="card-title">Fast Performance</h3>
+                    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod eu lorem et ultricies.</p>
+                </div>
+                <div class="card">
+                    <div class="card-icon">🎨</div>
+                    <h3 class="card-title">Beautiful Design</h3>
+                    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod eu lorem et ultricies.</p>
+                </div>
+                <div class="card">
+                    <div class="card-icon">📱</div>
+                    <h3 class="card-title">Responsive Layout</h3>
+                    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod eu lorem et ultricies.</p>
+                </div>
             </div>
+        </div>
+    </section>
 
-            <!-- Lists -->
-            <div class="element-group">
-                <h3 class="element-title">Lists</h3>
-                
-                <h4>Unordered List</h4>
-                <ul class="list unordered">
-                    <li class="list-item">First unordered item</li>
-                    <li class="list-item">Second unordered item</li>
-                    <li class="list-item">
-                        Third unordered item with a nested list
-                        <ul class="nested-list">
-                            <li class="nested-item">Nested item 1</li>
-                            <li class="nested-item">Nested item 2</li>
-                        </ul>
-                    </li>
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="about-image">
+                <div class="image-placeholder">About Image Placeholder</div>
+            </div>
+            <div class="about-content">
+                <h2 class="section-title">About Us</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod eu lorem et ultricies. In porta lorem at dui semper, non ultrices ipsum tincidunt.</p>
+                <p>Phasellus elementum felis at lacus blandit rhoncus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
+                <ul class="about-list">
+                    <li>First important point about our service</li>
+                    <li>Second important point about our team</li>
+                    <li>Third important point about our values</li>
                 </ul>
-
-                <h4>Ordered List</h4>
-                <ol class="list ordered">
-                    <li class="list-item">First ordered item</li>
-                    <li class="list-item">Second ordered item</li>
-                    <li class="list-item">Third ordered item</li>
-                </ol>
-
-                <h4>Definition List</h4>
-                <dl class="list definition">
-                    <dt class="term">HTML</dt>
-                    <dd class="definition">HyperText Markup Language</dd>
-                    <dt class="term">CSS</dt>
-                    <dd class="definition">Cascading Style Sheets</dd>
-                </dl>
+                <a href="#" class="btn primary-btn">Learn More</a>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <!-- Containers Section -->
-        <section id="containers" class="section">
-            <h2 class="section-title">Container Elements</h2>
-
-            <!-- Divs and Spans -->
-            <div class="element-group">
-                <h3 class="element-title">Div and Span Elements</h3>
-                <div class="container primary">
-                    This is a div with the 'primary' class
-                    <span class="inline-element highlight">This is a span with the 'highlight' class</span>
-                    that can be styled inline.
-                </div>
-                <div class="container secondary">
-                    This is another div with the 'secondary' class
-                </div>
-                <div class="container nested">
-                    <div class="inner-container">
-                        This is a nested div for testing child selectors
-                    </div>
-                </div>
-            </div>
-
-            <!-- Semantic Containers -->
-            <div class="element-group">
-                <h3 class="element-title">Semantic Elements</h3>
-                <article class="article">
-                    <header class="article-header">
-                        <h3>Article Title</h3>
-                        <p class="meta">Posted on <time datetime="2023-05-15">May 15, 2023</time></p>
-                    </header>
-                    <p>This is an article container with its own header. Articles are useful for self-contained content.</p>
-                    <footer class="article-footer">
-                        <p>Article Footer</p>
-                    </footer>
-                </article>
-
-                <aside class="sidebar">
-                    <h3>Sidebar</h3>
-                    <p>This is an aside element, typically used for sidebars.</p>
-                </aside>
-            </div>
-        </section>
-
-        <!-- Forms Section -->
-        <section id="forms" class="section">
-            <h2 class="section-title">Form Elements</h2>
-            
-            <form class="form" action="#" method="post">
-                <!-- Text Inputs -->
-                <div class="form-group">
-                    <h3 class="element-title">Text Inputs</h3>
-                    
-                    <div class="input-wrapper">
-                        <label for="text-input" class="label">Text Input:</label>
-                        <input type="text" id="text-input" name="text-input" class="input-field" placeholder="Enter text here">
-                    </div>
-                    
-                    <div class="input-wrapper">
-                        <label for="email-input" class="label">Email Input:</label>
-                        <input type="email" id="email-input" name="email-input" class="input-field" placeholder="Enter email">
-                    </div>
-                    
-                    <div class="input-wrapper">
-                        <label for="password-input" class="label">Password Input:</label>
-                        <input type="password" id="password-input" name="password-input" class="input-field" placeholder="Enter password">
-                    </div>
-                    
-                    <div class="input-wrapper">
-                        <label for="textarea" class="label">Textarea:</label>
-                        <textarea id="textarea" name="textarea" class="input-field textarea" rows="4" placeholder="Enter longer text here"></textarea>
-                    </div>
-                </div>
-                
-                <!-- Select and Options -->
-                <div class="form-group">
-                    <h3 class="element-title">Select Dropdowns</h3>
-                    
-                    <div class="input-wrapper">
-                        <label for="select" class="label">Select Dropdown:</label>
-                        <select id="select" name="select" class="input-field select">
-                            <option value="">Please select an option</option>
-                            <option value="option1">Option 1</option>
-                            <option value="option2">Option 2</option>
-                            <option value="option3">Option 3</option>
-                        </select>
-                    </div>
-                    
-                    <div class="input-wrapper">
-                        <label for="multi-select" class="label">Multiple Select:</label>
-                        <select id="multi-select" name="multi-select[]" class="input-field select" multiple size="3">
-                            <option value="option1">Option 1</option>
-                            <option value="option2">Option 2</option>
-                            <option value="option3">Option 3</option>
-                            <option value="option4">Option 4</option>
-                        </select>
-                    </div>
-                </div>
-                
-                <!-- Checkboxes and Radio Buttons -->
-                <div class="form-group">
-                    <h3 class="element-title">Checkboxes and Radio Buttons</h3>
-                    
-                    <fieldset class="input-group">
-                        <legend>Checkbox Group:</legend>
-                        
-                        <div class="checkbox-wrapper">
-                            <input type="checkbox" id="checkbox1" name="checkbox1" class="checkbox">
-                            <label for="checkbox1" class="checkbox-label">Checkbox Option 1</label>
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="testimonials">
+        <div class="container">
+            <h2 class="section-title">What Our Clients Say</h2>
+            <div class="testimonial-cards">
+                <div class="testimonial">
+                    <div class="quote">"This is an amazing service! I would recommend it to anyone looking for quality solutions."</div>
+                    <div class="client">
+                        <div class="client-image"></div>
+                        <div class="client-info">
+                            <h4>John Doe</h4>
+                            <p>CEO, Example Company</p>
                         </div>
-                        
-                        <div class="checkbox-wrapper">
-                            <input type="checkbox" id="checkbox2" name="checkbox2" class="checkbox">
-                            <label for="checkbox2" class="checkbox-label">Checkbox Option 2</label>
-                        </div>
-                        
-                        <div class="checkbox-wrapper">
-                            <input type="checkbox" id="checkbox3" name="checkbox3" class="checkbox" checked>
-                            <label for="checkbox3" class="checkbox-label">Checkbox Option 3 (pre-checked)</label>
-                        </div>
-                    </fieldset>
-                    
-                    <fieldset class="input-group">
-                        <legend>Radio Button Group:</legend>
-                        
-                        <div class="radio-wrapper">
-                            <input type="radio" id="radio1" name="radio-group" value="radio1" class="radio">
-                            <label for="radio1" class="radio-label">Radio Option 1</label>
-                        </div>
-                        
-                        <div class="radio-wrapper">
-                            <input type="radio" id="radio2" name="radio-group" value="radio2" class="radio">
-                            <label for="radio2" class="radio-label">Radio Option 2</label>
-                        </div>
-                        
-                        <div class="radio-wrapper">
-                            <input type="radio" id="radio3" name="radio-group" value="radio3" class="radio" checked>
-                            <label for="radio3" class="radio-label">Radio Option 3 (pre-selected)</label>
-                        </div>
-                    </fieldset>
-                </div>
-                
-                <!-- Range and Color Inputs -->
-                <div class="form-group">
-                    <h3 class="element-title">Range and Color Inputs</h3>
-                    
-                    <div class="input-wrapper">
-                        <label for="range" class="label">Range Slider:</label>
-                        <input type="range" id="range" name="range" class="input-field range" min="0" max="100" value="50">
-                    </div>
-                    
-                    <div class="input-wrapper">
-                        <label for="color" class="label">Color Picker:</label>
-                        <input type="color" id="color" name="color" class="input-field color" value="#3366cc">
                     </div>
                 </div>
-                
-                <!-- Date and Time Inputs -->
-                <div class="form-group">
-                    <h3 class="element-title">Date and Time Inputs</h3>
-                    
-                    <div class="input-wrapper">
-                        <label for="date" class="label">Date:</label>
-                        <input type="date" id="date" name="date" class="input-field date">
-                    </div>
-                    
-                    <div class="input-wrapper">
-                        <label for="time" class="label">Time:</label>
-                        <input type="time" id="time" name="time" class="input-field time">
-                    </div>
-                    
-                    <div class="input-wrapper">
-                        <label for="datetime-local" class="label">Date and Time:</label>
-                        <input type="datetime-local" id="datetime-local" name="datetime-local" class="input-field datetime">
+                <div class="testimonial">
+                    <div class="quote">"The team was professional and delivered exactly what we needed. Great experience!"</div>
+                    <div class="client">
+                        <div class="client-image"></div>
+                        <div class="client-info">
+                            <h4>Jane Smith</h4>
+                            <p>Designer, Creative Studio</p>
+                        </div>
                     </div>
                 </div>
-                
-                <!-- File Input -->
-                <div class="form-group">
-                    <h3 class="element-title">File Input</h3>
-                    
-                    <div class="input-wrapper">
-                        <label for="file" class="label">File Upload:</label>
-                        <input type="file" id="file" name="file" class="input-field file">
-                    </div>
-                </div>
-                
-                <!-- Buttons -->
-                <div class="form-group">
-                    <h3 class="element-title">Buttons</h3>
-                    
-                    <div class="button-group">
-                        <button type="submit" class="button primary">Submit Button</button>
-                        <button type="reset" class="button secondary">Reset Button</button>
-                        <button type="button" class="button tertiary">Regular Button</button>
-                        <input type="submit" class="button input-submit" value="Input Submit">
-                        <input type="reset" class="button input-reset" value="Input Reset">
-                        <input type="button" class="button input-button" value="Input Button">
-                    </div>
-                </div>
-            </form>
-        </section>
+            </div>
+        </div>
+    </section>
 
-        <!-- Tables Section -->
-        <section id="tables" class="section">
-            <h2 class="section-title">Table Elements</h2>
-            
-            <div class="element-group">
-                <h3 class="element-title">Basic Table</h3>
-                <table class="table">
-                    <caption>Sample Table Caption</caption>
-                    <thead>
-                        <tr>
-                            <th scope="col">Header 1</th>
-                            <th scope="col">Header 2</th>
-                            <th scope="col">Header 3</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>Row 1, Cell 1</td>
-                            <td>Row 1, Cell 2</td>
-                            <td>Row 1, Cell 3</td>
-                        </tr>
-                        <tr>
-                            <td>Row 2, Cell 1</td>
-                            <td>Row 2, Cell 2</td>
-                            <td>Row 2, Cell 3</td>
-                        </tr>
-                        <tr>
-                            <td>Row 3, Cell 1</td>
-                            <td>Row 3, Cell 2</td>
-                            <td>Row 3, Cell 3</td>
-                        </tr>
-                    </tbody>
-                    <tfoot>
-                        <tr>
-                            <td colspan="3">Table footer spanning all columns</td>
-                        </tr>
-                    </tfoot>
-                </table>
-            </div>
-            
-            <div class="element-group">
-                <h3 class="element-title">Complex Table</h3>
-                <table class="table complex">
-                    <caption>Complex Table with Row and Column Headers</caption>
-                    <thead>
-                        <tr>
-                            <th scope="col">Product</th>
-                            <th scope="col">Q1</th>
-                            <th scope="col">Q2</th>
-                            <th scope="col">Q3</th>
-                            <th scope="col">Q4</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <th scope="row">Product A</th>
-                            <td>100</td>
-                            <td>150</td>
-                            <td>200</td>
-                            <td>250</td>
-                        </tr>
-                        <tr>
-                            <th scope="row">Product B</th>
-                            <td>200</td>
-                            <td>250</td>
-                            <td>300</td>
-                            <td>350</td>
-                        </tr>
-                        <tr>
-                            <th scope="row">Product C</th>
-                            <td>300</td>
-                            <td>350</td>
-                            <td>400</td>
-                            <td>450</td>
-                        </tr>
-                    </tbody>
-                    <tfoot>
-                        <tr>
-                            <th scope="row">Total</th>
-                            <td>600</td>
-                            <td>750</td>
-                            <td>900</td>
-                            <td>1050</td>
-                        </tr>
-                    </tfoot>
-                </table>
-            </div>
-        </section>
-
-        <!-- Miscellaneous Section -->
-        <section id="misc" class="section">
-            <h2 class="section-title">Miscellaneous Elements</h2>
-            
-            <!-- Images -->
-            <div class="element-group">
-                <h3 class="element-title">Images</h3>
-                <figure class="figure">
-                    <!-- Using SVG inline for testing purposes -->
-                    <svg class="svg-image" width="200" height="100" viewBox="0 0 200 100" xmlns="http://www.w3.org/2000/svg">
-                        <rect width="200" height="100" fill="#eeeeee" />
-                        <circle cx="100" cy="50" r="40" stroke="#666666" stroke-width="2" fill="#cccccc" />
-                        <text x="100" y="55" font-family="Arial" font-size="12" text-anchor="middle">SVG Placeholder</text>
-                    </svg>
-                    <figcaption>Figure Caption: A simple SVG placeholder image</figcaption>
-                </figure>
-            </div>
-            
-            <!-- Media Elements -->
-            <div class="element-group">
-                <h3 class="element-title">Media Elements</h3>
-                
-                <h4>Audio Element (with fallback)</h4>
-                <audio controls class="audio-player">
-                    <source src="https://example.com/audio.mp3" type="audio/mpeg">
-                    Your browser does not support the audio element.
-                </audio>
-                
-                <h4>Video Element (with fallback)</h4>
-                <video controls class="video-player" width="400" height="225">
-                    <source src="https://example.com/video.mp4" type="video/mp4">
-                    Your browser does not support the video element.
-                </video>
-            </div>
-            
-            <!-- Inline Frame -->
-            <div class="element-group">
-                <h3 class="element-title">Inline Frame</h3>
-                <iframe class="iframe" src="about:blank" width="400" height="200" frameborder="0" title="Example iFrame">
-                    Your browser does not support iframes.
-                </iframe>
-            </div>
-            
-            <!-- Progress and Meter -->
-            <div class="element-group">
-                <h3 class="element-title">Progress and Meter Elements</h3>
-                
-                <div class="progress-wrapper">
-                    <label for="progress">Progress Bar (70%):</label>
-                    <progress id="progress" class="progress" value="70" max="100">70%</progress>
+    <!-- Contact Form Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title">Get In Touch</h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="info-item">
+                        <h3>Email</h3>
+                        <p>info@example.com</p>
+                    </div>
+                    <div class="info-item">
+                        <h3>Phone</h3>
+                        <p>+1 234 567 8900</p>
+                    </div>
+                    <div class="info-item">
+                        <h3>Address</h3>
+                        <p>123 Street Name, City, Country</p>
+                    </div>
                 </div>
-                
-                <div class="meter-wrapper">
-                    <label for="meter">Meter (Value 6 out of 10):</label>
-                    <meter id="meter" class="meter" value="6" min="0" max="10" low="3" high="7" optimum="5">6 out of 10</meter>
+                <form class="contact-form">
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="name" placeholder="Your Name">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" placeholder="Your Email">
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" rows="5" placeholder="Your Message"></textarea>
+                    </div>
+                    <button type="submit" class="btn primary-btn">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <h2>Brand<span>Name</span></h2>
+                    <p>A simple landing page for CSS testing.</p>
+                </div>
+                <div class="footer-links">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#features">Features</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#testimonials">Testimonials</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-newsletter">
+                    <h3>Newsletter</h3>
+                    <p>Subscribe to our newsletter for updates.</p>
+                    <div class="newsletter-form">
+                        <input type="email" placeholder="Your Email">
+                        <button class="btn primary-btn">Subscribe</button>
+                    </div>
                 </div>
             </div>
-            
-            <!-- Details and Summary -->
-            <div class="element-group">
-                <h3 class="element-title">Details and Summary Elements</h3>
-                
-                <details class="details">
-                    <summary class="summary">Click to Expand/Collapse</summary>
-                    <p>This is the hidden content that will be revealed when the summary is clicked.</p>
-                    <p>You can include any HTML elements here.</p>
-                </details>
+            <div class="footer-bottom">
+                <p>&copy; 2025 BrandName. All rights reserved.</p>
+                <div class="social-links">
+                    <a href="#" class="social-link">FB</a>
+                    <a href="#" class="social-link">TW</a>
+                    <a href="#" class="social-link">IG</a>
+                    <a href="#" class="social-link">LI</a>
+                </div>
             </div>
-        </section>
-    </main>
-
-    <footer id="main-footer" class="section container">
-        <p class="copyright">&copy; 2023 CSS Testing Document</p>
-        <p class="credits">Created for CSS testing purposes</p>
-        <address class="contact">
-            Contact Information: <a href="mailto:example@example.com">example@example.com</a>
-        </address>
+        </div>
     </footer>
 </body>
 </html>
