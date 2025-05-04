@@ -1,0 +1,12 @@
+<svg width="50" height="50" viewBox="0 0 50 50" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <circle cx="25" cy="25" r="25" fill="#dce4ff" />
+  
+  <!-- Avatar silhouette -->
+  <circle cx="25" cy="18" r="10" fill="#4c6fff" opacity="0.7" />
+  <path d="M15,38 C15,28 35,28 35,38" fill="#4c6fff" opacity="0.7" />
+  <!-- Glasses -->
+  <rect x="15" y="16" width="8" height="4" rx="2" ry="2" fill="#333" opacity="0.8" />
+  <rect x="27" y="16" width="8" height="4" rx="2" ry="2" fill="#333" opacity="0.8" />
+  <line x1="23" y1="18" x2="27" y2="18" stroke="#333" stroke-width="1" opacity="0.8" />
+</svg>
