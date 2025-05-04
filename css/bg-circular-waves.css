@@ -1,0 +1,61 @@
+/* Circular Waves Background */
+.bg-circular-waves {
+  --wave-color-1: rgba(0, 150, 136, 0.03); /* Teal */
+  --wave-color-2: rgba(3, 169, 244, 0.03); /* Light Blue */
+  --bg-color: #ffffff;
+  --animation-duration: 25s;
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1;
+  pointer-events: none;
+  background-color: var(--bg-color);
+  overflow: hidden;
+}
+
+.bg-circular-waves::before,
+.bg-circular-waves::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 50vw;
+  height: 50vw;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.bg-circular-waves::before {
+  box-shadow: 
+    0 0 0 20vw var(--wave-color-1),
+    0 0 0 40vw transparent,
+    0 0 0 60vw var(--wave-color-1),
+    0 0 0 80vw transparent;
+  animation: circular-pulse var(--animation-duration) infinite ease-in-out;
+}
+
+.bg-circular-waves::after {
+  box-shadow: 
+    0 0 0 10vw transparent,
+    0 0 0 30vw var(--wave-color-2),
+    0 0 0 50vw transparent,
+    0 0 0 70vw var(--wave-color-2);
+  animation: circular-pulse var(--animation-duration) infinite ease-in-out;
+  animation-delay: calc(var(--animation-duration) * -0.5);
+}
+
+@keyframes circular-pulse {
+  0% {
+    width: 0;
+    height: 0;
+    opacity: 1;
+  }
+  100% {
+    width: 100vw;
+    height: 100vw;
+    opacity: 0;
+  }
+}
