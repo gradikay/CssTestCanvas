@@ -1,0 +1,53 @@
+/* Background Styles Only for Landing Page */
+
+/* Main background for entire page */
+body {
+    /* Subtle blue gradient background */
+    background: linear-gradient(135deg, #f0f4ff 0%, #e6eeff 100%);
+    background-attachment: fixed;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+}
+
+/* Section backgrounds */
+.header {
+    background-color: white;
+}
+
+.hero {
+    background: linear-gradient(135deg, #f5f7ff 0%, #e3e9ff 100%);
+}
+
+.features {
+    background-color: white;
+}
+
+.about {
+    background-color: #f9f9f9;
+}
+
+.testimonials {
+    background-color: white;
+}
+
+.contact {
+    background-color: #f9f9f9;
+}
+
+.footer {
+    background-color: #252525;
+}
+
+/* Card backgrounds */
+.card {
+    background-color: white;
+}
+
+.testimonial {
+    background-color: #f9f9f9;
+}
+
+.contact-form {
+    background-color: white;
+}
