@@ -1,33 +1,12 @@
-/* This file is not used in the current setup as CSS is included directly in the HTML file */
-/* The landing page is using internal CSS styling for better demonstration */
-/* You can uncomment and use these styles if you want to move the CSS to an external file */
-
-/*
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+/* This file is left intentionally blank for you to add your CSS styles */
+/* You can use this to test various CSS properties on the HTML elements */
 
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: Arial, sans-serif;
     line-height: 1.6;
     color: #333;
-    background-color: #f9f9f9;
-}
-
-a {
-    text-decoration: none;
-    color: inherit;
-}
-
-ul {
-    list-style: none;
-}
-
-img {
-    max-width: 100%;
-    height: auto;
+    margin: 0;
+    padding: 0;
 }
 
 .container {
@@ -37,25 +16,12 @@ img {
     padding: 0 15px;
 }
 
-.btn {
-    display: inline-block;
-    padding: 12px 24px;
-    border-radius: 30px;
-    font-weight: 600;
-    transition: all 0.3s ease;
-    cursor: pointer;
-    text-align: center;
+.header {
+    background-color: #f8f9fa;
+    padding: 20px 0;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
-.primary-btn {
-    background-color: #4C6FFF;
-    color: white;
-    border: none;
+footer {
+    background-color: #333;
 }
-
-.primary-btn:hover {
-    background-color: #3A5BDE;
-    transform: translateY(-2px);
-    box-shadow: 0 5px 15px rgba(76, 111, 255, 0.3);
-}
-*/

@@ -25,10 +25,10 @@ body {
 /* Container */
 .container {
     width: 90%;
-    max-width: 1400px;
+    max-width: 1200px;
     margin: 0 auto;
-    padding: 0 20px;
- 
+    padding: 0 15px;
+}
 
 /* Buttons */
 .btn {
@@ -637,7 +637,7 @@ body {
 
 /* Footer */
 .footer {
-    background-color: rgba(0, 0, 0, 0.8);
+    background-color: rgb(255, 0, 0, 0.8);
     color: white;
     padding: 70px 0 0;
     position: relative;

@@ -1,5 +1,40 @@
-/* Animated gradient background for the body element */
+/* 
+ * Background styles for the landing page
+ * This file contains only background-related styles for better organization
+ */
+
+/* Base body background */
 body {
     background: transparent;
 }
 
+/* Header background */
+.header {
+    background-color: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+}
+
+/* Feature cards background */
+.card {
+    background-color: white;
+}
+
+/* About section background */
+.about {
+    background-color: #f9faff;
+}
+
+/* Testimonials section background */
+.testimonials {
+    background-color: white;
+}
+
+/* Contact section background */
+.contact {
+    background-color: #f9faff;
+}
+
+/* Background for image placeholder */
+.image-placeholder {
+    background-color: #f0f4ff;
+}
