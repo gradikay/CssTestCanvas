@@ -1,0 +1,54 @@
+/* Subtle Grid Background */
+.grid {
+  --grid-color: rgba(148, 163, 184, 0.15);
+  --grid-size: 30px;
+  --accent-color-1: rgba(139, 92, 246, 0.08);
+  --accent-color-2: rgba(236, 72, 153, 0.06);
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1;
+  pointer-events: none; /* ensures it doesn't block interactions */
+  background-color: #f8fafc;
+  background-image: 
+    linear-gradient(var(--grid-color) 1px, transparent 1px),
+    linear-gradient(90deg, var(--grid-color) 1px, transparent 1px);
+  background-size: var(--grid-size) var(--grid-size);
+  overflow: hidden;
+}
+
+.grid::before,
+.grid::after {
+  content: "";
+  position: absolute;
+  width: 500px;
+  height: 500px;
+  border-radius: 50%;
+  top: 20%;
+  left: 30%;
+  background: var(--accent-color-1);
+  filter: blur(100px);
+  animation: drift 25s infinite alternate ease-in-out;
+}
+
+.grid::after {
+  width: 300px;
+  height: 300px;
+  top: 60%;
+  left: 60%;
+  background: var(--accent-color-2);
+  animation-duration: 30s;
+  animation-delay: -15s;
+}
+
+@keyframes drift {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(100px, 50px);
+  }
+}

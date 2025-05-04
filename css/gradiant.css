@@ -1,0 +1,36 @@
+/* Animated Gradient Background */
+.gradiant {
+  --gradient-color-1: rgba(139, 92, 246, 0.15);
+  --gradient-color-2: rgba(236, 72, 153, 0.15);
+  --gradient-color-3: rgba(59, 130, 246, 0.15);
+  --gradient-color-4: rgba(248, 113, 113, 0.15);
+  --animation-duration: 15s;
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1;
+  pointer-events: none; /* ensures it doesn't block interactions */
+  background: linear-gradient(45deg, 
+    var(--gradient-color-1), 
+    var(--gradient-color-2), 
+    var(--gradient-color-3), 
+    var(--gradient-color-4), 
+    var(--gradient-color-1));
+  background-size: 400% 400%;
+  animation: gradient-shift var(--animation-duration) ease infinite;
+}
+
+@keyframes gradient-shift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
