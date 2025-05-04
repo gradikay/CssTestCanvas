@@ -1,8 +1,61 @@
-<svg width="50" height="50" viewBox="0 0 50 50" xmlns="http://www.w3.org/2000/svg">
-  <!-- Background -->
-  <circle cx="25" cy="25" r="25" fill="#dce4ff" />
+<svg width="200" height="200" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background Circle -->
+  <circle cx="100" cy="100" r="100" fill="#f0f4ff" />
   
-  <!-- Avatar silhouette -->
-  <circle cx="25" cy="20" r="10" fill="#4c6fff" opacity="0.7" />
-  <path d="M12,40 C12,30 38,30 38,40" fill="#4c6fff" opacity="0.7" />
+  <!-- Gradient Overlay -->
+  <circle cx="100" cy="100" r="100" fill="url(#avatarGrad)" />
+  
+  <!-- Definitions -->
+  <defs>
+    <linearGradient id="avatarGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#4c6fff;stop-opacity:0.05" />
+      <stop offset="100%" style="stop-color:#7000ff;stop-opacity:0.1" />
+    </linearGradient>
+    <linearGradient id="skinTone" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#f5d0b0;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#eac298;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Woman Avatar with Elegant Professional Style -->
+  
+  <!-- Hair Back Layer -->
+  <path d="M140,98 C140,75 128,55 100,55 C72,55 60,75 60,98 C60,110 60,135 60,135 
+           C60,135 63,160 100,160 C137,160 140,135 140,135 
+           C140,135 140,110 140,98 Z" 
+      fill="#6b4c36" />
+  
+  <!-- Neck -->
+  <path d="M85,132 C85,132 100,140 115,132 L115,160 L85,160 Z" fill="url(#skinTone)" />
+  
+  <!-- Face -->
+  <circle cx="100" cy="95" r="35" fill="url(#skinTone)" />
+  
+  <!-- Hair Front Layer -->
+  <path d="M60,90 C60,90 65,55 100,55 C135,55 140,90 140,90 C140,90 135,60 100,60 C65,60 60,90 60,90 Z" fill="#86583c" />
+  <path d="M65,75 C65,75 65,100 72,110 C72,110 70,85 75,75 Z" fill="#86583c" />
+  <path d="M135,75 C135,75 135,100 128,110 C128,110 130,85 125,75 Z" fill="#86583c" />
+  
+  <!-- Eyes -->
+  <ellipse cx="85" cy="90" rx="5" ry="3" fill="#363636" />
+  <ellipse cx="115" cy="90" rx="5" ry="3" fill="#363636" />
+  
+  <!-- Eyebrows -->
+  <path d="M80,83 C80,83 85,80 90,83" stroke="#5a3825" stroke-width="2" fill="none" />
+  <path d="M110,83 C110,83 115,80 120,83" stroke="#5a3825" stroke-width="2" fill="none" />
+  
+  <!-- Nose -->
+  <path d="M100,95 C100,95 103,102 100,105 C97,102 100,95 100,95" fill="#eac298" />
+  
+  <!-- Smile -->
+  <path d="M85,110 C85,120 115,120 115,110" stroke="#cc6666" stroke-width="2" fill="none" />
+  
+  <!-- Earrings -->
+  <circle cx="65" cy="95" r="3" fill="#f0c420" />
+  <circle cx="135" cy="95" r="3" fill="#f0c420" />
+  
+  <!-- Elegant Shirt/Blouse -->
+  <path d="M60,135 C60,135 70,150 100,150 C130,150 140,135 140,135 L140,200 L60,200 Z" fill="#e6e6fa" />
+  <path d="M85,132 C85,132 100,140 115,132 L115,160 L85,160 Z" fill="#e6e6fa" />
+  <path d="M90,150 L110,150 L105,170 L95,170 Z" fill="#d9d9f2" />
 </svg>

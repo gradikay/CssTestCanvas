@@ -1,0 +1,84 @@
+<svg width="200" height="200" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background Circle -->
+  <circle cx="100" cy="100" r="100" fill="#f0f4ff" />
+  
+  <!-- Gradient Overlay -->
+  <circle cx="100" cy="100" r="100" fill="url(#avatarGrad)" />
+  
+  <!-- Definitions -->
+  <defs>
+    <linearGradient id="avatarGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#4c6fff;stop-opacity:0.05" />
+      <stop offset="100%" style="stop-color:#7000ff;stop-opacity:0.1" />
+    </linearGradient>
+    <linearGradient id="skinTone" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#d5a088;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#c48d75;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Woman Avatar with Creative Professional Style -->
+  
+  <!-- Neck -->
+  <path d="M85,132 C85,132 100,140 115,132 L115,160 L85,160 Z" fill="url(#skinTone)" />
+  
+  <!-- Face -->
+  <circle cx="100" cy="95" r="35" fill="url(#skinTone)" />
+  
+  <!-- Hair - Textured Curls -->
+  <path d="M60,70 C60,50 75,40 100,40 C125,40 140,50 140,70 
+           C140,90 135,100 135,100 C135,100 130,140 100,140 
+           C70,140 65,100 65,100 C65,100 60,90 60,70 Z" 
+        fill="#1a1a1a" />
+  
+  <!-- Curly Hair Detail -->
+  <g fill="#1a1a1a">
+    <circle cx="75" cy="55" r="8" />
+    <circle cx="90" cy="48" r="9" />
+    <circle cx="110" cy="48" r="9" />
+    <circle cx="125" cy="55" r="8" />
+    <circle cx="65" cy="70" r="10" />
+    <circle cx="60" cy="85" r="8" />
+    <circle cx="60" cy="100" r="7" />
+    <circle cx="140" cy="70" r="10" />
+    <circle cx="140" cy="85" r="8" />
+    <circle cx="140" cy="100" r="7" />
+    <circle cx="70" cy="115" r="10" />
+    <circle cx="130" cy="115" r="10" />
+    <circle cx="80" cy="130" r="8" />
+    <circle cx="120" cy="130" r="8" />
+    <circle cx="95" cy="138" r="8" />
+    <circle cx="105" cy="138" r="8" />
+  </g>
+  
+  <!-- Eyes -->
+  <ellipse cx="85" cy="90" rx="5" ry="3" fill="#4a2a00" />
+  <ellipse cx="115" cy="90" rx="5" ry="3" fill="#4a2a00" />
+  
+  <!-- Eyebrows -->
+  <path d="M80,83 C80,83 85,80 90,83" stroke="#1a1a1a" stroke-width="2" fill="none" />
+  <path d="M110,83 C110,83 115,80 120,83" stroke="#1a1a1a" stroke-width="2" fill="none" />
+  
+  <!-- Nose -->
+  <path d="M100,95 C100,95 103,102 100,105 C97,102 100,95 100,95" fill="#c48d75" />
+  
+  <!-- Lips -->
+  <path d="M100,110 C105,107 110,109 115,110 C110,116 90,116 85,110 C90,109 95,107 100,110" fill="#bc4746" />
+  
+  <!-- Earrings -->
+  <circle cx="65" cy="95" r="3" fill="#c0c0c0" />
+  <circle cx="135" cy="95" r="3" fill="#c0c0c0" />
+  <path d="M65,95 L65,105" stroke="#c0c0c0" stroke-width="1" />
+  <path d="M135,95 L135,105" stroke="#c0c0c0" stroke-width="1" />
+  <circle cx="65" cy="105" r="2" fill="#c0c0c0" />
+  <circle cx="135" cy="105" r="2" fill="#c0c0c0" />
+  
+  <!-- Creative Professional Outfit -->
+  <path d="M60,135 L60,200 L140,200 L140,135 C140,135 120,150 100,150 C80,150 60,135 60,135 Z" fill="#7986cb" />
+  <path d="M85,132 L85,160 L115,160 L115,132 C115,132 100,140 85,132 Z" fill="#e8eaf6" />
+  
+  <!-- Geometric Necklace -->
+  <path d="M95,155 L90,165 L110,165 L105,155 Z" stroke="#ffab00" stroke-width="1" fill="none" />
+  <path d="M92.5,160 L107.5,160" stroke="#ffab00" stroke-width="1" />
+  <circle cx="100" cy="160" r="2" fill="#ffab00" />
+</svg>
