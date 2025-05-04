@@ -1,6 +1,8 @@
 /* Background color only for the body element */
 body {
-    background-color: red;
+    background: transparent;
+    margin: 0;
+    padding: 0;
 }
 
 /* Gradient Wave Background */
@@ -17,12 +19,7 @@ body {
   width: 100%;
   height: 100%;
   z-index: -1;
-  background: linear-gradient(
-    var(--gradient-angle),
-    rgba(var(--primary-color-rgb), 0.1),
-    rgba(var(--secondary-color-rgb), 0.1),
-    rgba(var(--tertiary-color-rgb), 0.1)
-  );
+  background: red; /* Solid red background */
   overflow: hidden;
   pointer-events: none; /* This ensures clicks pass through */
 }
