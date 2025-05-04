@@ -1,0 +1,69 @@
+/* Dot Matrix Background */
+.bg-dot-matrix {
+  --dot-color: rgba(139, 92, 246, 0.15);
+  --dot-size: 2px;
+  --dot-space: 20px;
+  --accent-color: rgba(236, 72, 153, 0.1);
+  --animation-duration: 10s;
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1;
+  pointer-events: none; /* ensures it doesn't block interactions */
+  background-color: #f8fafc;
+  overflow: hidden;
+}
+
+.bg-dot-matrix::before {
+  content: "";
+  position: absolute;
+  width: 200vw;
+  height: 200vh;
+  top: -50vh;
+  left: -50vw;
+  background-image: 
+    radial-gradient(var(--dot-color) var(--dot-size), transparent var(--dot-size)),
+    radial-gradient(var(--dot-color) var(--dot-size), transparent var(--dot-size));
+  background-size: var(--dot-space) var(--dot-space);
+  background-position: 0 0, calc(var(--dot-space) / 2) calc(var(--dot-space) / 2);
+  animation: dot-matrix-float var(--animation-duration) linear infinite alternate;
+}
+
+.bg-dot-matrix::after {
+  content: "";
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  background: radial-gradient(
+    circle at 30% 50%, 
+    var(--accent-color), 
+    transparent 60%
+  );
+  filter: blur(10px);
+  animation: dot-pulse 8s ease-in-out infinite alternate;
+}
+
+@keyframes dot-matrix-float {
+  0% {
+    transform: translate(-10px, -10px) rotate(0deg);
+  }
+  100% {
+    transform: translate(10px, 10px) rotate(2deg);
+  }
+}
+
+@keyframes dot-pulse {
+  0%, 100% {
+    opacity: 0.6;
+    transform: scale(0.9);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.1);
+  }
+}

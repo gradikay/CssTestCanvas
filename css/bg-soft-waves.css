@@ -1,0 +1,61 @@
+/* Soft Waves Background */
+.bg-soft-waves {
+  --wave-color-1: rgba(100, 181, 246, 0.05); /* Light Blue */
+  --wave-color-2: rgba(129, 199, 132, 0.05); /* Light Green */
+  --bg-color: #ffffff;
+  --animation-duration: 18s;
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1;
+  pointer-events: none;
+  background-color: var(--bg-color);
+  overflow: hidden;
+}
+
+.bg-soft-waves::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 200%;
+  height: 100%;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 120' preserveAspectRatio='none'%3E%3Cpath d='M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z' fill='%236495ED' fill-opacity='.1'%3E%3C/path%3E%3C/svg%3E");
+  background-size: 100% 100px;
+  transform-origin: center bottom;
+  animation: soft-wave var(--animation-duration) infinite linear alternate;
+}
+
+.bg-soft-waves::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 200%;
+  height: 100%;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 120' preserveAspectRatio='none'%3E%3Cpath d='M0,0V7.23C0,65.52,268.63,112.77,600,112.77S1200,65.52,1200,7.23V0Z' fill='%2340E0D0' fill-opacity='.1'%3E%3C/path%3E%3C/svg%3E");
+  background-size: 100% 150px;
+  transform-origin: center bottom;
+  animation: soft-wave-alternate calc(var(--animation-duration) * 0.7) infinite linear alternate-reverse;
+}
+
+@keyframes soft-wave {
+  0% {
+    transform: translateX(0%) scaleY(1);
+  }
+  100% {
+    transform: translateX(-50%) scaleY(1.2);
+  }
+}
+
+@keyframes soft-wave-alternate {
+  0% {
+    transform: translateX(-50%) scaleY(1);
+  }
+  100% {
+    transform: translateX(0%) scaleY(1.1);
+  }
+}
