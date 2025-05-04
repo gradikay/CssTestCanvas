@@ -14,14 +14,20 @@ body {
     color: #333;
     min-height: 100vh;
     /* Background is handled by background.css */
+    overflow-x: hidden;
+}
+
+::selection {
+    background-color: rgba(76, 111, 255, 0.3);
+    color: #333;
 }
 
 /* Container */
 .container {
     width: 90%;
-    max-width: 1200px;
+    max-width: 1400px;
     margin: 0 auto;
-    padding: 0 15px;
+    padding: 0 20px;
  
 
 /* Buttons */
@@ -217,6 +223,25 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    transform: translateY(0);
+    transition: transform 0.5s ease;
+    position: relative;
+}
+
+.hero-image:hover {
+    transform: translateY(-5px);
+}
+
+.hero-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 20px;
+    filter: drop-shadow(0 15px 30px rgba(76, 111, 255, 0.2));
+    transition: filter 0.5s ease, transform 0.5s ease;
+}
+
+.hero-image img:hover {
+    filter: drop-shadow(0 20px 40px rgba(76, 111, 255, 0.3));
 }
 
 .image-placeholder {
@@ -346,6 +371,27 @@ body {
 
 .about-image {
     flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    transition: transform 0.5s ease;
+}
+
+.about-image:hover {
+    transform: translateY(-5px);
+}
+
+.about-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 15px;
+    filter: drop-shadow(0 10px 20px rgba(76, 111, 255, 0.15));
+    transition: filter 0.5s ease;
+}
+
+.about-image img:hover {
+    filter: drop-shadow(0 15px 30px rgba(76, 111, 255, 0.25));
 }
 
 .about-content {
@@ -409,16 +455,35 @@ body {
 }
 
 .testimonial {
-    /* background-color is defined in background.css */
+    background-color: white;
     border-radius: 15px;
     padding: 30px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
     transition: all 0.3s ease;
+    border: 1px solid rgba(76, 111, 255, 0.05);
+    position: relative;
+    overflow: hidden;
+}
+
+.testimonial::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    background: linear-gradient(to right, #4c6fff, #826fff);
+    opacity: 0;
+    transition: opacity 0.3s ease;
 }
 
 .testimonial:hover {
     transform: translateY(-5px);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+.testimonial:hover::before {
+    opacity: 1;
 }
 
 .quote {
@@ -443,20 +508,33 @@ body {
 }
 
 .client-image {
-    width: 50px;
-    height: 50px;
+    width: 60px;
+    height: 60px;
     border-radius: 50%;
     background-color: #f0f4ff;
     overflow: hidden;
     display: flex;
     align-items: center;
     justify-content: center;
+    box-shadow: 0 4px 10px rgba(76, 111, 255, 0.15);
+    border: 3px solid white;
+    transition: all 0.3s ease;
+}
+
+.testimonial:hover .client-image {
+    transform: scale(1.05);
+    box-shadow: 0 6px 15px rgba(76, 111, 255, 0.25);
 }
 
 .client-image img {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.client-image img:hover {
+    transform: scale(1.1);
 }
 
 .client-info h4 {
