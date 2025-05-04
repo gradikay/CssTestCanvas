@@ -8,30 +8,33 @@ body {
     background: transparent;
 }
 
-/* Header background */
+/* Header background - more transparent to showcase mirage background */
 .header {
-    background-color: rgba(255, 255, 255, 0.95);
-    backdrop-filter: blur(10px);
+    background-color: rgba(255, 255, 255, 0.80);
+    backdrop-filter: blur(8px);
 }
 
-/* Feature cards background */
+/* Feature cards background - subtle transparency */
 .card {
-    background-color: white;
+    background-color: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
-/* About section background */
+/* About section background - lighter to show mirage effect */
 .about {
-    background-color: #f9faff;
+    background-color: rgba(249, 250, 255, 0.7);
 }
 
-/* Testimonials section background */
+/* Testimonials section background - transparent to show mirage waves */
 .testimonials {
-    background-color: white;
+    background-color: rgba(255, 255, 255, 0.6);
+    backdrop-filter: blur(4px);
 }
 
-/* Contact section background */
+/* Contact section background - lighter to showcase the mirage */
 .contact {
-    background-color: #f9faff;
+    background-color: rgba(249, 250, 255, 0.7);
 }
 
 /* Background for image placeholder */

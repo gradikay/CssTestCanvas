@@ -635,13 +635,14 @@ body {
     box-shadow: 0 0 0 3px rgba(76, 111, 255, 0.1);
 }
 
-/* Footer */
+/* Footer - translucent to showcase the mirage background */
 .footer {
-    background-color: #2d3748;
+    background-color: rgba(45, 55, 72, 0.9);
     color: #e2e8f0;
     padding: 70px 0 0;
     position: relative;
     overflow: hidden;
+    backdrop-filter: blur(5px);
 }
 
 .footer::before {
