@@ -3,16 +3,604 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Simple Landing Page</title>
-    <!-- Link your CSS file here -->
-    <link rel="stylesheet" href="styles.css">
+    <title>Modern Landing Page</title>
+    <style>
+        /* Reset and Base Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f9f9f9;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 24px;
+            border-radius: 30px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            text-align: center;
+        }
+
+        .primary-btn {
+            background-color: #4C6FFF;
+            color: white;
+            border: none;
+        }
+
+        .primary-btn:hover {
+            background-color: #3A5BDE;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(76, 111, 255, 0.3);
+        }
+
+        .secondary-btn {
+            background-color: transparent;
+            color: #4C6FFF;
+            border: 2px solid #4C6FFF;
+        }
+
+        .secondary-btn:hover {
+            background-color: rgba(76, 111, 255, 0.1);
+            transform: translateY(-2px);
+        }
+
+        .section {
+            padding: 80px 0;
+        }
+
+        .section-title {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+            color: #252525;
+            text-align: center;
+        }
+
+        .section-subtitle {
+            font-size: 1.1rem;
+            margin-bottom: 50px;
+            color: #666;
+            text-align: center;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* Header Styles */
+        .header {
+            background-color: white;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            padding: 20px 0;
+        }
+
+        .header .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: #252525;
+        }
+
+        .logo span {
+            color: #4C6FFF;
+        }
+
+        .nav ul {
+            display: flex;
+            gap: 30px;
+        }
+
+        .nav a {
+            font-weight: 500;
+            position: relative;
+        }
+
+        .nav a.active,
+        .nav a:hover {
+            color: #4C6FFF;
+        }
+
+        .nav a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: #4C6FFF;
+            transition: width 0.3s ease;
+        }
+
+        .nav a.active::after,
+        .nav a:hover::after {
+            width: 100%;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #f5f7ff 0%, #e3e9ff 100%);
+            padding: 100px 0;
+        }
+
+        .hero .container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 60px;
+        }
+
+        .hero-content {
+            flex: 1;
+        }
+
+        .hero-title {
+            font-size: 3.5rem;
+            line-height: 1.2;
+            margin-bottom: 20px;
+            color: #252525;
+        }
+
+        .hero-text {
+            font-size: 1.1rem;
+            color: #555;
+            margin-bottom: 30px;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 15px;
+        }
+
+        .hero-image {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .image-placeholder {
+            background-color: #dce4ff;
+            border-radius: 20px;
+            width: 100%;
+            height: 400px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #4C6FFF;
+            font-weight: 600;
+            box-shadow: 0 15px 30px rgba(76, 111, 255, 0.2);
+        }
+
+        /* Features Section */
+        .features {
+            background-color: white;
+        }
+
+        .feature-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+
+        .card {
+            background-color: white;
+            border-radius: 15px;
+            padding: 30px;
+            transition: all 0.3s ease;
+            border: 1px solid #eee;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .card-icon {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+
+        .card-title {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            color: #252525;
+        }
+
+        .card-text {
+            color: #666;
+        }
+
+        /* About Section */
+        .about {
+            background-color: #f9f9f9;
+        }
+
+        .about .container {
+            display: flex;
+            align-items: center;
+            gap: 60px;
+        }
+
+        .about-image {
+            flex: 1;
+        }
+
+        .about-content {
+            flex: 1;
+        }
+
+        .about-content .section-title {
+            text-align: left;
+        }
+
+        .about-content p {
+            margin-bottom: 20px;
+            color: #555;
+        }
+
+        .about-list {
+            margin: 25px 0;
+        }
+
+        .about-list li {
+            margin-bottom: 10px;
+            padding-left: 25px;
+            position: relative;
+        }
+
+        .about-list li::before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #4C6FFF;
+            font-weight: bold;
+        }
+
+        /* Testimonials Section */
+        .testimonials {
+            background-color: white;
+        }
+
+        .testimonial-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+
+        .testimonial {
+            background-color: #f9f9f9;
+            border-radius: 15px;
+            padding: 30px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        }
+
+        .quote {
+            font-style: italic;
+            margin-bottom: 20px;
+            position: relative;
+            padding: 10px 0;
+        }
+
+        .quote::before,
+        .quote::after {
+            content: '"';
+            font-size: 2rem;
+            color: #4C6FFF;
+            opacity: 0.3;
+        }
+
+        .client {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .client-image {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background-color: #dce4ff;
+        }
+
+        .client-info h4 {
+            font-weight: 600;
+            color: #252525;
+        }
+
+        .client-info p {
+            font-size: 0.9rem;
+            color: #666;
+        }
+
+        /* Contact Section */
+        .contact {
+            background-color: #f9f9f9;
+        }
+
+        .contact-content {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 50px;
+            margin-top: 50px;
+        }
+
+        .contact-info {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+        }
+
+        .info-item h3 {
+            font-size: 1.2rem;
+            margin-bottom: 5px;
+            color: #252525;
+        }
+
+        .info-item p {
+            color: #666;
+        }
+
+        .contact-form {
+            background-color: white;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: 500;
+            color: #252525;
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 12px 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-family: inherit;
+            font-size: 1rem;
+            transition: border-color 0.3s ease;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus {
+            border-color: #4C6FFF;
+            outline: none;
+        }
+
+        /* Footer */
+        .footer {
+            background-color: #252525;
+            color: white;
+            padding: 70px 0 0;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+            margin-bottom: 50px;
+        }
+
+        .footer-logo h2 {
+            font-size: 1.8rem;
+            margin-bottom: 15px;
+        }
+
+        .footer-links h3,
+        .footer-newsletter h3 {
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+            position: relative;
+        }
+
+        .footer-links h3::after,
+        .footer-newsletter h3::after {
+            content: '';
+            position: absolute;
+            bottom: -8px;
+            left: 0;
+            width: 30px;
+            height: 2px;
+            background-color: #4C6FFF;
+        }
+
+        .footer-links ul {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .footer-links a {
+            color: #aaa;
+            transition: color 0.3s ease;
+        }
+
+        .footer-links a:hover {
+            color: white;
+        }
+
+        .footer-newsletter p {
+            margin-bottom: 15px;
+            color: #aaa;
+        }
+
+        .newsletter-form {
+            display: flex;
+            gap: 10px;
+        }
+
+        .newsletter-form input {
+            flex: 1;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            font-family: inherit;
+        }
+
+        .newsletter-form .btn {
+            padding: 10px 15px;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            padding: 20px 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: #aaa;
+            font-size: 0.9rem;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 15px;
+        }
+
+        .social-link {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 36px;
+            height: 36px;
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            transition: all 0.3s ease;
+        }
+
+        .social-link:hover {
+            background-color: #4C6FFF;
+            color: white;
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 992px) {
+            .hero .container,
+            .about .container {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .about-content .section-title {
+                text-align: center;
+            }
+
+            .about-list li {
+                text-align: left;
+            }
+
+            .contact-content {
+                grid-template-columns: 1fr;
+            }
+
+            .contact-info {
+                order: 2;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .hero {
+                padding: 80px 0;
+            }
+
+            .hero-title {
+                font-size: 2.5rem;
+            }
+
+            .section {
+                padding: 60px 0;
+            }
+
+            .section-title {
+                font-size: 2rem;
+            }
+
+            .nav ul {
+                gap: 15px;
+            }
+
+            .footer-content {
+                gap: 30px;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .cta-buttons {
+                flex-direction: column;
+                width: 100%;
+            }
+
+            .btn {
+                width: 100%;
+            }
+
+            .card {
+                padding: 20px;
+            }
+
+            .footer-bottom {
+                flex-direction: column;
+                gap: 15px;
+                text-align: center;
+            }
+
+            .social-links {
+                justify-content: center;
+            }
+        }
+    </style>
 </head>
 <body>
     <!-- Header Section -->
     <header class="header">
         <div class="container">
             <div class="logo">
-                <h1>Brand<span>Name</span></h1>
+                <h1>Stellar<span>X</span></h1>
             </div>
             <nav class="nav">
                 <ul>
@@ -30,85 +618,100 @@
     <section id="home" class="hero">
         <div class="container">
             <div class="hero-content">
-                <h2 class="hero-title">Welcome to Our Landing Page</h2>
-                <p class="hero-text">This is a simple landing page template for testing your CSS skills. It includes various elements that you can style to create a beautiful design.</p>
+                <h1 class="hero-title">Transform Your Digital Experience</h1>
+                <p class="hero-text">Create stunning, responsive websites with our cutting-edge platform. We combine beautiful design with powerful functionality to help you stand out online.</p>
                 <div class="cta-buttons">
-                    <a href="#" class="btn primary-btn">Get Started</a>
-                    <a href="#" class="btn secondary-btn">Learn More</a>
+                    <a href="#" class="btn primary-btn">Get Started Free</a>
+                    <a href="#" class="btn secondary-btn">View Demos</a>
                 </div>
             </div>
             <div class="hero-image">
-                <div class="image-placeholder">Hero Image Placeholder</div>
+                <div class="image-placeholder">Hero Image</div>
             </div>
         </div>
     </section>
 
     <!-- Features Section -->
-    <section id="features" class="features">
+    <section id="features" class="features section">
         <div class="container">
-            <h2 class="section-title">Key Features</h2>
+            <h2 class="section-title">Powerful Features</h2>
+            <p class="section-subtitle">Our platform is packed with everything you need to create, launch, and grow your online presence.</p>
+            
             <div class="feature-cards">
                 <div class="card">
                     <div class="card-icon">🚀</div>
-                    <h3 class="card-title">Fast Performance</h3>
-                    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod eu lorem et ultricies.</p>
+                    <h3 class="card-title">Lightning Fast</h3>
+                    <p class="card-text">Optimized for speed and performance, ensuring your visitors never have to wait.</p>
                 </div>
                 <div class="card">
                     <div class="card-icon">🎨</div>
-                    <h3 class="card-title">Beautiful Design</h3>
-                    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod eu lorem et ultricies.</p>
+                    <h3 class="card-title">Stunning Design</h3>
+                    <p class="card-text">Professionally crafted templates and design elements that catch the eye.</p>
                 </div>
                 <div class="card">
                     <div class="card-icon">📱</div>
-                    <h3 class="card-title">Responsive Layout</h3>
-                    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod eu lorem et ultricies.</p>
+                    <h3 class="card-title">Fully Responsive</h3>
+                    <p class="card-text">Looks perfect on every device, from smartphones to large desktop screens.</p>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- About Section -->
-    <section id="about" class="about">
+    <section id="about" class="about section">
         <div class="container">
             <div class="about-image">
-                <div class="image-placeholder">About Image Placeholder</div>
+                <div class="image-placeholder">About Us Image</div>
             </div>
             <div class="about-content">
-                <h2 class="section-title">About Us</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod eu lorem et ultricies. In porta lorem at dui semper, non ultrices ipsum tincidunt.</p>
-                <p>Phasellus elementum felis at lacus blandit rhoncus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
+                <h2 class="section-title">Why Choose Us</h2>
+                <p>Founded in 2020, StellarX has been at the forefront of digital innovation, helping businesses of all sizes establish a powerful online presence.</p>
+                <p>Our mission is to democratize web design and development, making cutting-edge technology accessible to everyone.</p>
                 <ul class="about-list">
-                    <li>First important point about our service</li>
-                    <li>Second important point about our team</li>
-                    <li>Third important point about our values</li>
+                    <li>10+ years of industry experience</li>
+                    <li>5,000+ satisfied customers worldwide</li>
+                    <li>24/7 dedicated customer support</li>
+                    <li>Regular updates and new features</li>
                 </ul>
-                <a href="#" class="btn primary-btn">Learn More</a>
+                <a href="#" class="btn primary-btn">Learn More About Us</a>
             </div>
         </div>
     </section>
 
     <!-- Testimonials Section -->
-    <section id="testimonials" class="testimonials">
+    <section id="testimonials" class="testimonials section">
         <div class="container">
-            <h2 class="section-title">What Our Clients Say</h2>
+            <h2 class="section-title">Customer Success Stories</h2>
+            <p class="section-subtitle">Don't just take our word for it — hear what our customers have to say about their experience with StellarX.</p>
+            
             <div class="testimonial-cards">
                 <div class="testimonial">
-                    <div class="quote">"This is an amazing service! I would recommend it to anyone looking for quality solutions."</div>
+                    <div class="quote">StellarX transformed our business overnight. The platform is intuitive, powerful, and helped us increase conversions by 40% in just three months.</div>
                     <div class="client">
                         <div class="client-image"></div>
                         <div class="client-info">
-                            <h4>John Doe</h4>
-                            <p>CEO, Example Company</p>
+                            <h4>Sarah Johnson</h4>
+                            <p>CEO, Bright Ideas Inc.</p>
                         </div>
                     </div>
                 </div>
                 <div class="testimonial">
-                    <div class="quote">"The team was professional and delivered exactly what we needed. Great experience!"</div>
+                    <div class="quote">As a non-technical founder, I needed something simple yet powerful. StellarX gave me exactly that, allowing me to focus on growing my business.</div>
                     <div class="client">
                         <div class="client-image"></div>
                         <div class="client-info">
-                            <h4>Jane Smith</h4>
-                            <p>Designer, Creative Studio</p>
+                            <h4>Michael Chen</h4>
+                            <p>Founder, GreenStart</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial">
+                    <div class="quote">The customer support team is exceptional. They went above and beyond to help us customize our site exactly how we wanted it.</div>
+                    <div class="client">
+                        <div class="client-image"></div>
+                        <div class="client-info">
+                            <h4>Emma Rodriguez</h4>
+                            <p>Marketing Director, TechFlow</p>
                         </div>
                     </div>
                 </div>
@@ -117,36 +720,46 @@
     </section>
 
     <!-- Contact Form Section -->
-    <section id="contact" class="contact">
+    <section id="contact" class="contact section">
         <div class="container">
             <h2 class="section-title">Get In Touch</h2>
+            <p class="section-subtitle">Have questions? We'd love to hear from you. Reach out to our team and we'll get back to you as soon as possible.</p>
+            
             <div class="contact-content">
                 <div class="contact-info">
                     <div class="info-item">
                         <h3>Email</h3>
-                        <p>info@example.com</p>
+                        <p>hello@stellarx.com</p>
                     </div>
                     <div class="info-item">
                         <h3>Phone</h3>
-                        <p>+1 234 567 8900</p>
+                        <p>+1 (555) 123-4567</p>
                     </div>
                     <div class="info-item">
                         <h3>Address</h3>
-                        <p>123 Street Name, City, Country</p>
+                        <p>123 Innovation Drive<br>San Francisco, CA 94103</p>
+                    </div>
+                    <div class="info-item">
+                        <h3>Hours</h3>
+                        <p>Monday - Friday: 9am - 6pm<br>Saturday - Sunday: Closed</p>
                     </div>
                 </div>
                 <form class="contact-form">
                     <div class="form-group">
-                        <label for="name">Name</label>
-                        <input type="text" id="name" name="name" placeholder="Your Name">
+                        <label for="name">Full Name</label>
+                        <input type="text" id="name" name="name" placeholder="Your name">
                     </div>
                     <div class="form-group">
-                        <label for="email">Email</label>
-                        <input type="email" id="email" name="email" placeholder="Your Email">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" name="email" placeholder="Your email">
+                    </div>
+                    <div class="form-group">
+                        <label for="subject">Subject</label>
+                        <input type="text" id="subject" name="subject" placeholder="Your subject">
                     </div>
                     <div class="form-group">
                         <label for="message">Message</label>
-                        <textarea id="message" name="message" rows="5" placeholder="Your Message"></textarea>
+                        <textarea id="message" name="message" rows="5" placeholder="Your message"></textarea>
                     </div>
                     <button type="submit" class="btn primary-btn">Send Message</button>
                 </form>
@@ -159,8 +772,8 @@
         <div class="container">
             <div class="footer-content">
                 <div class="footer-logo">
-                    <h2>Brand<span>Name</span></h2>
-                    <p>A simple landing page for CSS testing.</p>
+                    <h2>Stellar<span>X</span></h2>
+                    <p>Creating beautiful digital experiences that convert visitors into customers.</p>
                 </div>
                 <div class="footer-links">
                     <h3>Quick Links</h3>
@@ -172,17 +785,27 @@
                         <li><a href="#contact">Contact</a></li>
                     </ul>
                 </div>
+                <div class="footer-links">
+                    <h3>Resources</h3>
+                    <ul>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Documentation</a></li>
+                        <li><a href="#">Support Center</a></li>
+                        <li><a href="#">Pricing</a></li>
+                        <li><a href="#">FAQ</a></li>
+                    </ul>
+                </div>
                 <div class="footer-newsletter">
-                    <h3>Newsletter</h3>
-                    <p>Subscribe to our newsletter for updates.</p>
+                    <h3>Subscribe</h3>
+                    <p>Get the latest updates and news directly to your inbox.</p>
                     <div class="newsletter-form">
-                        <input type="email" placeholder="Your Email">
-                        <button class="btn primary-btn">Subscribe</button>
+                        <input type="email" placeholder="Your email address">
+                        <button class="btn primary-btn">Go</button>
                     </div>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2025 BrandName. All rights reserved.</p>
+                <p>&copy; 2025 StellarX. All rights reserved.</p>
                 <div class="social-links">
                     <a href="#" class="social-link">FB</a>
                     <a href="#" class="social-link">TW</a>
