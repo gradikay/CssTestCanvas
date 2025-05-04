@@ -1,0 +1,82 @@
+/* Geometric Shapes Background */
+.bg-geometric-shapes {
+  --shape-color-1: rgba(139, 92, 246, 0.05);
+  --shape-color-2: rgba(236, 72, 153, 0.05);
+  --shape-color-3: rgba(59, 130, 246, 0.05);
+  --base-color: #f8fafc;
+  --animation-duration: 15s;
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1;
+  pointer-events: none; /* ensures it doesn't block interactions */
+  background-color: var(--base-color);
+  overflow: hidden;
+}
+
+.bg-geometric-shapes::before {
+  content: "";
+  position: absolute;
+  width: 150vw;
+  height: 150vh;
+  top: -25vh;
+  left: -25vw;
+  background-image: 
+    linear-gradient(30deg, var(--shape-color-1) 12%, transparent 12.5%, transparent 87%, var(--shape-color-1) 87.5%, var(--shape-color-1)),
+    linear-gradient(150deg, var(--shape-color-1) 12%, transparent 12.5%, transparent 87%, var(--shape-color-1) 87.5%, var(--shape-color-1)),
+    linear-gradient(30deg, var(--shape-color-1) 12%, transparent 12.5%, transparent 87%, var(--shape-color-1) 87.5%, var(--shape-color-1)),
+    linear-gradient(150deg, var(--shape-color-1) 12%, transparent 12.5%, transparent 87%, var(--shape-color-1) 87.5%, var(--shape-color-1)),
+    linear-gradient(60deg, var(--shape-color-2) 25%, transparent 25.5%, transparent 75%, var(--shape-color-2) 75%, var(--shape-color-2)),
+    linear-gradient(60deg, var(--shape-color-3) 25%, transparent 25.5%, transparent 75%, var(--shape-color-3) 75%, var(--shape-color-3));
+  background-size: 
+    80px 140px,
+    80px 140px,
+    80px 140px,
+    80px 140px,
+    140px 140px,
+    140px 140px;
+  background-position: 
+    0 0,
+    0 0,
+    40px 70px,
+    40px 70px,
+    0 0,
+    40px 70px;
+}
+
+.bg-geometric-shapes::after {
+  content: "";
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  background: radial-gradient(
+    circle at 50% 50%,
+    rgba(139, 92, 246, 0.08),
+    transparent 60%
+  );
+}
+
+@keyframes geometric-spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes geometric-pulse {
+  0%, 100% {
+    opacity: 0.5;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.8;
+    transform: scale(1.1);
+  }
+}

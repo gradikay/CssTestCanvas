@@ -1,0 +1,61 @@
+/* Confetti Pattern Background */
+.bg-confetti {
+  --confetti-color-1: rgba(239, 68, 68, 0.4);
+  --confetti-color-2: rgba(59, 130, 246, 0.4);
+  --confetti-color-3: rgba(16, 185, 129, 0.4);
+  --confetti-color-4: rgba(236, 72, 153, 0.4);
+  --confetti-color-5: rgba(245, 158, 11, 0.4);
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1;
+  pointer-events: none; /* ensures it doesn't block interactions */
+  background-color: #f8fafc;
+  background-image: 
+    radial-gradient(var(--confetti-color-1) 2px, transparent 2px),
+    radial-gradient(var(--confetti-color-2) 2px, transparent 2px),
+    radial-gradient(var(--confetti-color-3) 2px, transparent 2px),
+    radial-gradient(var(--confetti-color-4) 2px, transparent 2px),
+    radial-gradient(var(--confetti-color-5) 2px, transparent 2px);
+  background-size: 
+    80px 80px,
+    120px 120px,
+    60px 60px,
+    100px 100px,
+    70px 70px;
+  background-position: 
+    0 0,
+    20px 30px,
+    40px 50px,
+    60px 10px,
+    10px 60px;
+  animation: confetti-drift 60s linear infinite;
+  overflow: hidden;
+}
+
+@keyframes confetti-drift {
+  0% {
+    background-position: 
+      0 0,
+      20px 30px,
+      40px 50px,
+      60px 10px,
+      10px 60px;
+  }
+  100% {
+    background-position: 
+      100px 100px,
+      120px 130px,
+      140px 150px,
+      160px 110px,
+      110px 160px;
+  }
+}
+
+/* HTML Structure */
+<div class="bg-confetti">
+  <!-- Your page content goes here -->
+</div>
