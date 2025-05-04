@@ -1,5 +1,10 @@
 /* Background Styles Only for Landing Page */
 
+/* 
+ * This CSS file contains all background color styles for the landing page.
+ * It's separated from the layout and component styling to allow for easy theming.
+ */
+
 /* Main background for entire page */
 body {
     /* Subtle blue gradient background */
@@ -39,7 +44,7 @@ body {
     background-color: #252525;
 }
 
-/* Card backgrounds */
+/* Card and component backgrounds */
 .card {
     background-color: white;
 }
@@ -50,4 +55,61 @@ body {
 
 .contact-form {
     background-color: white;
+}
+
+.image-placeholder {
+    background-color: #dce4ff;
+}
+
+.client-image {
+    background-color: #dce4ff;
+}
+
+/* Social media and other elements */
+.social-link {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.social-link:hover {
+    background-color: #4C6FFF;
+}
+
+/* Decorative backgrounds */
+.hero::before {
+    background: rgba(76, 111, 255, 0.1);
+}
+
+.hero::after {
+    background: rgba(76, 111, 255, 0.05);
+}
+
+.features::before {
+    background: rgba(76, 111, 255, 0.03);
+}
+
+.about::before {
+    background: rgba(76, 111, 255, 0.05);
+}
+
+.testimonials::after {
+    background: rgba(76, 111, 255, 0.05);
+}
+
+.contact::before {
+    background: rgba(76, 111, 255, 0.05);
+}
+
+/* Gradient effects */
+.footer::before {
+    background: linear-gradient(to right, transparent, rgba(255, 255, 255, 0.1), transparent);
+}
+
+.image-placeholder::after {
+    background: linear-gradient(
+        to bottom right,
+        rgba(255, 255, 255, 0.2) 0%,
+        rgba(255, 255, 255, 0.1) 50%,
+        transparent 51%,
+        transparent 100%
+    );
 }
